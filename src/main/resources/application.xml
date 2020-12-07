@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       https://www.springframework.org/schema/aop/spring-aop.xsd
+">
+
+    <!-- pra2用 -->
+    <bean id="person" class="com.lisapra.pra2.entity.Person">
+        <!--使用property标签给对象的属性赋值
+        name:表示属性的名称
+        value：表示属性的值
+        -->
+        <property name="id" value="1"></property>
+        <property name="name" value="zhangsan"></property>
+        <property name="age" value="18"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+
+    <!-- pra4用 -->
+    <!--<context:component-scan base-package="com.lisapra.pra4.springaop"></context:component-scan>
+    &lt;!&ndash;此处使用的是aspectj的自动装配&ndash;&gt;
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>-->
+
+    <!-- pra6用 -->
+<!--    <context:component-scan base-package="com.lisapra.pra6"></context:component-scan>
+    &lt;!&ndash;此处使用的是aspectj的自动装配&ndash;&gt;
+    &lt;!&ndash;proxy-target-class="true" 表示使用CGLib动态代理技术织入增强&ndash;&gt;
+    &lt;!&ndash;proxy-target-class="false" 有接口使用jdk，没接口使用cglib&ndash;&gt;
+    <aop:aspectj-autoproxy proxy-target-class="false"></aop:aspectj-autoproxy>-->
+
+    <!-- pra7用 -->
+    <!--<context:component-scan base-package="com.lisapra.pra7.multiAspect"></context:component-scan>
+    &lt;!&ndash;此处使用的是aspectj的自动装配&ndash;&gt;
+    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>-->
+</beans>
